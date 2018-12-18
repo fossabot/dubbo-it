@@ -3,6 +3,7 @@ image:
 build: off
 install:
   - npm install
-test_script:
+before_test:
   - npm run build
+test_script:
   - npm test
