@@ -6,6 +6,7 @@ build: off
 install:
   - yarn
 before_test:
+  - yarn lint
   - yarn build
 test_script:
   - yarn test
