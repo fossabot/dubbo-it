@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import { Button } from 'antd'
+import { Layout } from 'antd'
+import Body from './components/Body'
+import Navigation from './components/Navigation'
 import './App.css'
 
 class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <Button type='primary'>Button</Button>
-      </div>
+      <Layout>
+        <Navigation></Navigation>
+        <Body></Body>
+      </Layout>
     )
   }
 }
