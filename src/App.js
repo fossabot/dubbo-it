@@ -8,8 +8,8 @@ class App extends Component {
   render () {
     return (
       <Layout>
-        <Navigation></Navigation>
-        <Body></Body>
+        <Navigation />
+        <Body />
       </Layout>
     )
   }

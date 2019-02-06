@@ -8,7 +8,7 @@ export default class Body extends Component {
   render () {
     return (
       <Layout>
-        <Services></Services>
+        <Services />
         <Content>Content</Content>
       </Layout>
     )
