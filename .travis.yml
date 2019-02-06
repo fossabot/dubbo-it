@@ -1,9 +1,10 @@
 language: node_js
 node_js:
   - "8"
+  - "10"
 install:
-  - npm install
+  - yarn
 before_script:
-  - npm run build
+  - yarn build
 script:
-  - npm test
+  - yarn test
