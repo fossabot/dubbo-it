@@ -21,7 +21,7 @@ bootJar {
 }
 
 jacoco {
-    toolVersion = '0.8.2'
+    toolVersion = '0.8.3'
 }
 
 jacocoTestReport {
@@ -50,7 +50,7 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web:$springVersion"
     implementation "org.springframework.boot:spring-boot-starter-freemarker:$springVersion"
     testImplementation "org.springframework.boot:spring-boot-starter-test:$springVersion"
-    ktlint "com.github.shyiko:ktlint:0.29.0"
+    ktlint "com.github.shyiko:ktlint:0.30.0"
 }
 
 task ktlint(type: JavaExec, group: "verification") {
