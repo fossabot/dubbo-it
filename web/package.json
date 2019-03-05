@@ -20,7 +20,8 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "copy": "rimraf ../src/main/resources/static/**/* && copyfiles --up 1 ./build/**/* ../src/main/resources/static"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +31,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "copyfiles": "^2.1.0",
+    "rimraf": "^2.6.3"
+  }
 }
