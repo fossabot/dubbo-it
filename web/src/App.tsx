@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Layout } from 'antd'
 import Navigation from './components/Navigation'
-import Services from './components/Services'
+import Registries from './components/Registries'
 import './App.css'
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
       <Layout tagName="main">
         <Navigation/>
         <Layout tagName="section">
-          <Services/>
+          <Registries/>
         </Layout>
       </Layout>
     )
