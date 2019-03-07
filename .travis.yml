@@ -1,0 +1,9 @@
+language: java
+install:
+  - cd web && yarn
+script:
+  - gradle build
+  - gradle ktlint
+  - gradle test jacocoTestReport
+  - cd web
+  - yarn lint && yarn build && yarn test
