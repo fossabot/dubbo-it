@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 const { Header } = Layout
 
 class Navigation extends Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <Header className="header" tagName="header">
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{ lineHeight: '64px' }}>

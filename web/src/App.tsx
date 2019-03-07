@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
 import { Layout } from 'antd'
+import React, { Component } from 'react'
+import './App.css'
 import Navigation from './components/Navigation'
 import Registries from './components/Registries'
-import './App.css'
 
 class App extends Component {
-  render() {
+  public render() {
     return (
       <Layout tagName="main">
         <Navigation/>
