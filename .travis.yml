@@ -1,5 +1,6 @@
 language: java
 install:
+  - nvm install --lts
   - cd web && yarn
 script:
   - gradle build
