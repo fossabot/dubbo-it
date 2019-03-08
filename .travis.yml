@@ -1,5 +1,7 @@
 language: java
 install:
+  - curl -s https://get.sdkman.io | bash
+  - sdk install gradle
   - nvm install --lts
   - cd web && yarn
 script:
