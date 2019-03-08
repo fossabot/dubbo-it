@@ -46,6 +46,8 @@ configurations {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "org.jetbrains.kotlin:kotlin-reflect"
+    implementation 'org.apache.dubbo:dubbo:2.7.0'
+    implementation 'org.apache.zookeeper:zookeeper:3.4.13'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8'
     implementation "org.springframework.boot:spring-boot-starter-web:$springVersion"
     testImplementation "org.springframework.boot:spring-boot-starter-test:$springVersion"
