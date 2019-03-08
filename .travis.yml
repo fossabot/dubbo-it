@@ -3,6 +3,7 @@ install:
   - nvm install --lts
   - cd web && yarn
 script:
+  - cd ..
   - gradle build
   - gradle ktlint
   - gradle test jacocoTestReport
