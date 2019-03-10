@@ -4,13 +4,18 @@ import React, { Component } from 'react'
 const { Header } = Layout
 
 class Navigation extends Component {
-  state = { isModalVisible: false }
+  public state = { isModalVisible: false }
 
   public render(): React.ReactNode {
     return (
       <Header className="header" tagName="header">
         <Button type="primary" icon="plus-circle" onClick={this.showModal}>New</Button>
-        <Modal title="Basic Modal" visible={this.state.isModalVisible} onCancel={this.handleModalCancel} footer={null}>
+        <Modal
+          title="Basic Modal"
+          visible={this.state.isModalVisible}
+          onCancel={this.handleModalCancel}
+          footer={null}
+        >
           <p>Hello</p>
         </Modal>
       </Header>
@@ -19,13 +24,13 @@ class Navigation extends Component {
 
   private showModal = () => {
     this.setState({
-      isModalVisible: true
+      isModalVisible: true,
     })
   }
 
-  private handleModalCancel = (e: any) => {
+  private handleModalCancel = (e: React.MouseEvent<any>) => {
     this.setState({
-      isModalVisible: false
+      isModalVisible: false,
     })
   }
 }
