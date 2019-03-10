@@ -1,19 +1,22 @@
-import { Button, Layout, Modal } from 'antd'
+import { ClickParam } from 'antd/es/menu'
+import { Button, Dropdown, Icon, Layout, Menu, Modal } from 'antd'
 import React, { Component } from 'react'
 
 const { Header } = Layout
 
 class Navigation extends Component {
-  public state = { isModalVisible: false }
+  public state = { isRegistryModalVisible: false }
 
   public render(): React.ReactNode {
     return (
       <Header className="header" tagName="header">
-        <Button type="primary" icon="plus-circle" onClick={this.showModal}>New</Button>
+        <Dropdown overlay={this.menu}>
+          <Button type="primary">New<Icon type="caret-down" /></Button>
+        </Dropdown>
         <Modal
-          title="Basic Modal"
-          visible={this.state.isModalVisible}
-          onCancel={this.handleModalCancel}
+          title="Create New"
+          visible={this.state.isRegistryModalVisible}
+          onCancel={this.handleRegistryModalCancel}
           footer={null}
         >
           <p>Hello</p>
@@ -22,15 +25,34 @@ class Navigation extends Component {
     )
   }
 
-  private showModal = () => {
+  private menu: React.ReactNode = () => {
+    return (
+      <Menu onClick={this.handleMenuClick}>
+        <Menu.Item key="1">Registry</Menu.Item>
+      </Menu>
+    )
+  }
+
+  private handleMenuClick = (clickParam: ClickParam) => {
+    switch (clickParam.key) {
+      case "1":
+        this.showRegistryModal()
+
+        break
+      default:
+        break
+    }
+  }
+
+  private showRegistryModal = () => {
     this.setState({
-      isModalVisible: true,
+      isRegistryModalVisible: true,
     })
   }
 
-  private handleModalCancel = (e: React.MouseEvent<any>) => {
+  private handleRegistryModalCancel = (e: React.MouseEvent<any>) => {
     this.setState({
-      isModalVisible: false,
+      isRegistryModalVisible: false,
     })
   }
 }
