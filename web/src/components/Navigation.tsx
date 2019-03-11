@@ -1,4 +1,4 @@
-import { ClickParam } from 'antd/es/menu'
+import { ClickParam } from 'antd/lib/menu'
 import { Button, Dropdown, Icon, Layout, Menu, Modal } from 'antd'
 import React, { Component } from 'react'
 
