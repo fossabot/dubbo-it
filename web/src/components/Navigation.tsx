@@ -1,5 +1,5 @@
-import { ClickParam } from 'antd/lib/menu'
 import { Button, Dropdown, Icon, Layout, Menu, Modal } from 'antd'
+import { ClickParam } from 'antd/lib/menu'
 import React, { Component } from 'react'
 
 const { Header } = Layout
