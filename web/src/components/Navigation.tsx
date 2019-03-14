@@ -1,4 +1,4 @@
-import { Button, Dropdown, Icon, Layout, Menu, Modal } from 'antd'
+import { Button, Dropdown, Form, Icon, Input, Layout, Menu, Modal } from 'antd'
 import { ClickParam } from 'antd/lib/menu'
 import React, { Component } from 'react'
 
@@ -14,12 +14,24 @@ class Navigation extends Component {
           <Button type="primary">New<Icon type="caret-down" /></Button>
         </Dropdown>
         <Modal
-          title="Create New"
+          title="New Registry"
           visible={this.state.isRegistryModalVisible}
           onCancel={this.handleRegistryModalCancel}
-          footer={null}
         >
-          <p>Hello</p>
+          <Form>
+            <Form.Item label="Host">
+              <Input />
+            </Form.Item>
+            <Form.Item label="Port">
+              <Input />
+            </Form.Item>
+            <Form.Item label="Username">
+              <Input />
+            </Form.Item>
+            <Form.Item label="Password">
+              <Input />
+            </Form.Item>
+          </Form>
         </Modal>
       </Header>
     )
