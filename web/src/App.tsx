@@ -8,9 +8,9 @@ import Registries from './components/Registries'
 class App extends Component {
   public render() {
     return (
-      <Layout tagName="main">
+      <Layout>
         <Navigation/>
-        <Layout tagName="section">
+        <Layout>
           <Registries/>
           <Body/>
         </Layout>

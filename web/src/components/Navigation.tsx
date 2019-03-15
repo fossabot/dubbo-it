@@ -9,7 +9,7 @@ class Navigation extends Component {
 
   public render(): React.ReactNode {
     return (
-      <Header className="header" tagName="header">
+      <Header className="header">
         <Dropdown overlay={this.menu}>
           <Button type="primary">New<Icon type="caret-down" /></Button>
         </Dropdown>
@@ -17,6 +17,7 @@ class Navigation extends Component {
           title="New Registry"
           visible={this.state.isRegistryModalVisible}
           onCancel={this.handleRegistryModalCancel}
+          footer={null}
         >
           <Form>
             <Form.Item label="Host">
