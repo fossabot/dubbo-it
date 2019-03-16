@@ -1,6 +1,7 @@
-import { Button, Dropdown, Form, Icon, Input, Layout, Menu, Modal } from 'antd'
+import { Button, Dropdown, Icon, Layout, Menu, Modal } from 'antd'
 import { ClickParam } from 'antd/lib/menu'
 import React, { Component } from 'react'
+import RegistryForm from './RegistryForm'
 
 const { Header } = Layout
 
@@ -19,20 +20,7 @@ class Navigation extends Component {
           onCancel={this.handleRegistryModalCancel}
           footer={null}
         >
-          <Form>
-            <Form.Item label="Host">
-              <Input />
-            </Form.Item>
-            <Form.Item label="Port">
-              <Input />
-            </Form.Item>
-            <Form.Item label="Username">
-              <Input />
-            </Form.Item>
-            <Form.Item label="Password">
-              <Input />
-            </Form.Item>
-          </Form>
+          <RegistryForm />
         </Modal>
       </Header>
     )

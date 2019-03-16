@@ -6,6 +6,7 @@
     "jsRules": {},
     "rules": {
         "jsx-wrap-multiline": false,
+        "jsx-no-multiline-js": false,
         "quotemark": ["single"],
         "semicolon": ["never"],
         "no-console": false,

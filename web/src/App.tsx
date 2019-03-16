@@ -9,10 +9,10 @@ class App extends Component {
   public render() {
     return (
       <Layout>
-        <Navigation/>
+        <Navigation />
         <Layout>
-          <Registries/>
-          <Body/>
+          <Registries />
+          <Body />
         </Layout>
       </Layout>
     )
