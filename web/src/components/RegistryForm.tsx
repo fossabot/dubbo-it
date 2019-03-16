@@ -1,6 +1,6 @@
 import { Button, Form, Input } from 'antd'
 import { FormComponentProps } from 'antd/lib/form'
-import React, { Component } from 'react'
+import React, { Component, FormEvent } from 'react'
 import '../css/registry-form.css'
 
 class RegistryForm extends Component<FormComponentProps> {
@@ -8,16 +8,16 @@ class RegistryForm extends Component<FormComponentProps> {
     const { getFieldDecorator } = this.props.form
 
     return (
-      <Form>
+      <Form onSubmit={this.handleSubmit}>
         <Form.Item label="Host">
-          {getFieldDecorator('Host', {
+          {getFieldDecorator('host', {
             rules: [{ required: true, message: 'Host is required' }],
           })(
             <Input />,
           )}
         </Form.Item>
         <Form.Item label="Port">
-          {getFieldDecorator('Port', {
+          {getFieldDecorator('port', {
             rules: [
               {
                 message: 'Invalid port',
@@ -40,6 +40,16 @@ class RegistryForm extends Component<FormComponentProps> {
         </Form.Item>
       </Form>
     )
+  }
+
+  private handleSubmit = (e: FormEvent<any>) => {
+    e.preventDefault()
+
+    this.props.form.validateFields((error, values) => {
+      if (!error) {
+        console.log(values)
+      }
+    })
   }
 }
 
