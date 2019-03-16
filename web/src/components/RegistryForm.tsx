@@ -1,5 +1,5 @@
 import { Button, Form, Input } from 'antd'
-import { FormComponentProps } from 'antd/lib/form'
+import { FormComponentProps } from 'antd/es/form'
 import React, { Component, FormEvent } from 'react'
 import '../css/registry-form.css'
 

@@ -1,5 +1,5 @@
 import { Button, Dropdown, Icon, Layout, Menu, Modal } from 'antd'
-import { ClickParam } from 'antd/lib/menu'
+import { ClickParam } from 'antd/es/menu'
 import React, { Component } from 'react'
 import RegistryForm from './RegistryForm'
 
@@ -36,7 +36,7 @@ class Navigation extends Component {
 
   private handleMenuClick = (clickParam: ClickParam) => {
     switch (clickParam.key) {
-      case "1":
+      case '1':
         this.showRegistryModal()
 
         break
