@@ -41,6 +41,10 @@ repositories {
 
 configurations {
     ktlint
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
 }
 
 dependencies {
@@ -51,6 +55,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8'
     implementation "org.springframework.boot:spring-boot-starter-web:$springVersion"
     testImplementation "org.springframework.boot:spring-boot-starter-test:$springVersion"
+    developmentOnly "org.springframework.boot:spring-boot-devtools:$springVersion"
     ktlint "com.github.shyiko:ktlint:0.30.0"
 }
 

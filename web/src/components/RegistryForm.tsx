@@ -9,22 +9,16 @@ class RegistryForm extends Component<FormComponentProps> {
 
     return (
       <Form onSubmit={this.handleSubmit}>
-        <Form.Item label="Host">
-          {getFieldDecorator('host', {
-            rules: [{ required: true, message: 'Host is required' }],
+        <Form.Item label="Name">
+          {getFieldDecorator('name', {
+            rules: [{ required: true, message: 'Name is required' }],
           })(
             <Input />,
           )}
         </Form.Item>
-        <Form.Item label="Port">
-          {getFieldDecorator('port', {
-            rules: [
-              {
-                message: 'Invalid port',
-                pattern: /^()([1-9]|[1-5]?[0-9]{2,4}|6[1-4][0-9]{3}|65[1-4][0-9]{2}|655[1-2][0-9]|6553[1-5])$/,
-              },
-              { message: 'Port is required', required: true },
-            ],
+        <Form.Item label="Address">
+          {getFieldDecorator('address', {
+            rules: [{ required: true, message: 'Address is required' }],
           })(
             <Input />,
           )}
@@ -47,7 +41,15 @@ class RegistryForm extends Component<FormComponentProps> {
 
     this.props.form.validateFields((error, values) => {
       if (!error) {
-        console.log(values)
+        fetch('/registries', {
+          body: JSON.stringify(values),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          method: 'POST',
+        }).then((response) => response.json())
+          .then((json) => console.log(json))
+          .catch((err) => console.error(err))
       }
     })
   }

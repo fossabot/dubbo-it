@@ -38,5 +38,6 @@
     "rimraf": "^2.6.3",
     "tslint": "^5.14.0",
     "tslint-react": "^3.6.0"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
