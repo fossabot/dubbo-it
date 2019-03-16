@@ -5,7 +5,7 @@ import org.apache.dubbo.config.RegistryConfig
 import java.util.concurrent.ConcurrentHashMap
 
 object ApplicationManager {
-    private val applications: MutableMap<Registry, ApplicationConfig> = ConcurrentHashMap()
+    private val applications: MutableMap<String, ApplicationConfig> = ConcurrentHashMap()
 
     fun addApplication(registry: Registry) {
         val registryConfig = RegistryConfig()
@@ -15,10 +15,10 @@ object ApplicationManager {
         applicationConfig.name = registry.name
         applicationConfig.registry = registryConfig
 
-        applications[registry] = applicationConfig
+        applications[registry.name] = applicationConfig
     }
 
-    fun getApplication(registry: Registry): ApplicationConfig? {
-        return applications[registry]
+    fun getApplication(name: String): ApplicationConfig? {
+        return applications[name]
     }
 }
