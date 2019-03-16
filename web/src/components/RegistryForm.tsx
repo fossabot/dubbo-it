@@ -1,6 +1,7 @@
-import { Form, Input } from 'antd'
+import { Button, Form, Input } from 'antd'
 import { FormComponentProps } from 'antd/lib/form'
 import React, { Component } from 'react'
+import '../css/registry-form.css'
 
 class RegistryForm extends Component<FormComponentProps> {
   public render(): React.ReactNode {
@@ -18,8 +19,11 @@ class RegistryForm extends Component<FormComponentProps> {
         <Form.Item label="Port">
           {getFieldDecorator('Port', {
             rules: [
-              { pattern: /^()([1-9]|[1-5]?[0-9]{2,4}|6[1-4][0-9]{3}|65[1-4][0-9]{2}|655[1-2][0-9]|6553[1-5])$/, message: 'Invalid port' },
-              { required: true, message: 'Port is required' },
+              {
+                message: 'Invalid port',
+                pattern: /^()([1-9]|[1-5]?[0-9]{2,4}|6[1-4][0-9]{3}|65[1-4][0-9]{2}|655[1-2][0-9]|6553[1-5])$/,
+              },
+              { message: 'Port is required', required: true },
             ],
           })(
             <Input />,
@@ -30,6 +34,9 @@ class RegistryForm extends Component<FormComponentProps> {
         </Form.Item>
         <Form.Item label="Password">
           <Input type="password" />
+        </Form.Item>
+        <Form.Item>
+          <Button type="primary" htmlType="submit" className="registry-form-submit">Submit</Button>
         </Form.Item>
       </Form>
     )

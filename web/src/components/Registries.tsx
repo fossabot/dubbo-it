@@ -1,5 +1,6 @@
 import { Layout, Menu } from 'antd'
 import React, { Component } from 'react'
+import '../css/registries.css'
 
 const { SubMenu } = Menu
 const { Sider } = Layout
@@ -12,7 +13,7 @@ class Registries extends Component {
           mode="inline"
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
-          style={{ height: '100%', borderRight: 0 }}
+          className="registries"
         >
           <SubMenu key="sub1" title={<span>subnav 1</span>}>
             <Menu.Item key="1">option1</Menu.Item>
