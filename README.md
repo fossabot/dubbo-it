@@ -1,1 +1,6 @@
 # dubbo-it [![Build Status](https://travis-ci.org/Frederick-S/dubbo-it.svg?branch=master)](https://travis-ci.org/Frederick-S/dubbo-it) [![Build status](https://ci.appveyor.com/api/projects/status/075c3ws51x9f9n8w/branch/master?svg=true)](https://ci.appveyor.com/project/Frederick-S/dubbo-it/branch/master) [![codebeat badge](https://codebeat.co/badges/996b59ee-27b5-42fe-9487-16e4bcbc6b39)](https://codebeat.co/projects/github-com-frederick-s-dubbo-it-master) [![Maintainability](https://api.codeclimate.com/v1/badges/673cc9c4cb39b3256a3c/maintainability)](https://codeclimate.com/github/Frederick-S/dubbo-it/maintainability) [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FFrederick-S%2Fdubbo-it.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FFrederick-S%2Fdubbo-it?ref=badge_shield)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FFrederick-S%2Fdubbo-it.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FFrederick-S%2Fdubbo-it?ref=badge_large)
